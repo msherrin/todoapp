@@ -1,5 +1,6 @@
 Blocitoff::Application.routes.draw do
 
+  devise_for :users
   get "welcome/index"
   get "welcome/about"
 
@@ -7,6 +8,8 @@ Blocitoff::Application.routes.draw do
 
 resources :todos, only: [:new, :create, :show, :edit, :index]
 
+
+resources :users
 
 
 

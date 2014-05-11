@@ -1,0 +1,10 @@
+<h1>Todos</h1>
+
+<ol>
+<% @todos.each do |todo| %>	
+	<li>
+		<%= todo.description %>
+		<%= distance_of_time_in_words(todo.created_at, 8.days.ago) %>
+	</li>
+<% end %>
+</ol>

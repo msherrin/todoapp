@@ -1,6 +1,12 @@
 class TodosController < ApplicationController
+
+  def index
+    @todos =  Todo.all.order(:created_at => :asc)
+    render 'todos/index'
+  end
+
 	def new
-	 end
+	end
 
   def create
   	@todo = Todo.new(todo_params)

@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Oh just do it!</title>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+<!-- 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css"> -->
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
 	<div class="container">
@@ -12,6 +13,8 @@
         <li><%= link_to "About", welcome_about_path %></li>
       </ul>
 
+
+<%= render '/logged_in_as' if current_user %>
 <p><%= flash[:notice] if flash[:notice] %></p>
 
 <%= yield %>
