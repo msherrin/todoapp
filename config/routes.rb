@@ -1,5 +1,10 @@
 Blocitoff::Application.routes.draw do
 
+  get "welcome/index"
+  get "welcome/about"
+
+  root to: 'welcome#index'
+
 resources :todos, only: [:new, :create, :show, :edit, :index]
 
 

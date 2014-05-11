@@ -3,14 +3,21 @@
 <head>
   <title>Oh just do it!</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+      <ul class="nav nav-tabs">
+        <li><%= link_to "Oh Just Do It!", welcome_index_path %></li>
+        <li><%= link_to "About", welcome_about_path %></li>
+      </ul>
 
 <p><%= flash[:notice] if flash[:notice] %></p>
 
 <%= yield %>
+	</div>
+		
+
 
 </body>
 </html>
