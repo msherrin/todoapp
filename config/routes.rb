@@ -1,4 +1,10 @@
 Blocitoff::Application.routes.draw do
+
+resources :todos, only: [:new, :create, :show, :edit, :index]
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blocitoff</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Oh just do it!</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<p><%= flash[:notice] if flash[:notice] %></p>
 
 <%= yield %>
 
